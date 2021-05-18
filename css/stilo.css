@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  margin-bottom: 55px;
+}
+.container .card .header {
+  position: relative;
+  height: 150px;
+}
+.container .card .header .bgpattern {
+  background: url("../images/bg-pattern-mobile.svg") center no-repeat;
+  background-size: contain;
+  width: 100%;
+  position: absolute;
+  top: 145px;
+  height: 110px;
+}
+.container .card .header .illustrator {
+  background: url("../images/illustration-woman-online-mobile.svg") center no-repeat;
+  background-size: contain;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  height: 200px;
+}
+.container .card .content {
+  background: snow;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 21px;
+  padding: 110px 20px 50px 20px;
+  box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.75);
+}
+.container .card .content .title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 25px auto;
+  color: #4a4b5e;
+}
+.container .card .content details {
+  color: #4a4b5e;
+  border-bottom: 2px solid #e7e7e9;
+  padding: 20px 0;
+  position: relative;
+  transition: all 0.5s;
+}
+.container .card .content details summary {
+  list-style: none;
+  position: relative;
+  color: #4a4b5e;
+  transition: all 0.5s;
+}
+.container .card .content details summary:hover {
+  cursor: pointer;
+  color: #f47c57;
+}
+.container .card .content details span {
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: url("../images/icon-arrow-down.svg") center no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+.container .card .content details .active {
+  font-weight: 700;
+}
+.container .card .content details summary.active span {
+  transform: rotate(180deg);
+}
+.container .card .content details p {
+  padding-top: 15px;
+  color: #787887;
+  transition: all 0.5s;
+  line-height: 1.2rem;
+}
+
+.attribution {
+  width: 100%;
+  background: #1d1e35;
+  color: #787887;
+  padding: 11px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #e7e7e9;
+}
+.attribution a:hover {
+  color: aqua;
+}
+
+@media (min-width: 940px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 920px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 55px;
+    background: snow;
+    border-radius: 17px;
+    box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.5), inset 3px 5px 9px rgba(0, 0, 0, 0.5);
+  }
+  .container .illustrator-box {
+    background: url("../images/illustration-box-desktop.svg") center no-repeat;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 40px;
+    left: -460px;
+    animation: mov 3s linear alternate infinite;
+  }
+  @keyframes mov {
+    0% {
+      top: 40px;
+      left: -460px;
+    }
+    100% {
+      top: 10px;
+      left: -400px;
+    }
+  }
+  .container .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  .container .card .header {
+    position: relative;
+    width: 470px;
+    height: 100%;
+  }
+  .container .card .header .bgpattern {
+    background: url("../images/bg-pattern-desktop.svg") center no-repeat;
+    background-size: contain;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: -300px;
+    left: -610px;
+  }
+  .container .card .header .illustrator {
+    background: url("../images/illustration-woman-online-desktop.svg") center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    left: -70px;
+  }
+  .container .card .content {
+    width: 450px;
+    height: 550px;
+    margin: 0;
+    padding: 60px 40px;
+    box-shadow: none;
+    background: none;
+  }
+  .container .card .content .title {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=stilo.css.map */
